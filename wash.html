@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales.com - Registration</title>
+    <link rel="stylesheet" href="wash.css">
+</head>
+<body>
+<div class="container">
+    <h1>Alicash</h1>
+    <h2>Registration Form</h2>
+    <form id="registrationForm">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="name" required>
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" required pattern="[\+0-9]{10,15}" placeholder="e.g., +1234567890">
+        <label for="dob">Date of Birth</label>
+        <input type="date" id="dob" name="dob" required>
+        <label for="introducer">Introduced by</label>
+        <input type="text" id="introducer" name="introducer" required>
+        <!-- Payment Option Section -->
+        <div class="payment-option" id="paymentOptionSection" style="display: none;">
+            <h3>Payment Option</h3>
+            <p>Do you want to pay the full amount or have the referrer pay the remaining amount?</p>
+            
+            <label>
+                <input type="radio" name="paymentOption" value="fullAmount"> Pay Full Amount
+            </label><br>
+            
+            <label>
+                <input type="radio" name="paymentOption" value="referrerPays"> Referrer Pays the Remaining amount
+            </label><br>
+            
+            <button type="button" id="nextStepButton" disabled>Continue</button>
+        </div>
+        <button type="button" id="paymentOptionButton">Payment Option</button>
+        <input type="submit" value="Submit">
+    </form>
+    <div class="description">
+        <p>For more information, contact our support team on +254701948688.</p>
+        <button id="paymentButton">How to Pay</button>
+        <div id="paymentDetails" class="hidden">
+            <p>To complete the payment, follow these steps:</p>
+            <p>1. Go to "Send Money" option on your payment app.</p>
+            <p>2. Enter the phone number <strong>+254701948688</strong>.</p>
+            <p>3. Amount 250shs</p>
+            <p>4. Follow the instructions to complete the payment.</p>
+        </div>
+    </div>
+</div>
+<script src="wash.js"></script>
+</body>
+</html>

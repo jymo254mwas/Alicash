@@ -1,0 +1,211 @@
+/* Apply background image to the entire body of the page */
+body {
+    background-image: url('phone.jpg'); /* Replace with your image URL */
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat; /* Ensure the image doesn't repeat */
+    font-family: Arial, sans-serif; /* Use a clean font */
+    color: #333; /* Default text color */
+    margin: 0;
+    padding: 0;
+}
+
+/* Basic container styling with reduced width */
+.container {
+    width: 100%;
+    max-width: 800px; /* Set a maximum width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px;
+    background-color: rgba(213, 196, 208, 0.8); /* Slight white background to make text readable */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Header styling */
+h1{
+    text-align: center;
+    color: #d22c2c;
+    font-size: 48px;
+    margin-bottom: 20px  
+}
+h2 {
+    text-align: center;
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* Form styling */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styling */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Input field styling */
+input[type="text"], input[type="tel"], input[type="date"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+}
+
+input[type="text"]:focus, input[type="tel"]:focus, input[type="date"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Button styling */
+button, input[type="submit"] {
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+button {
+    background-color: #007BFF;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 15px 30px;
+    border-radius: 8px;
+    border: 2px solid #0056b3;
+    transition: transform 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(0, 0, 0, 0.4); /* Darken the background when hovered */
+    transform: scale(1.05);
+}
+
+/* Payment Option Section Styling */
+.payment-option {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f1f1f1;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.payment-option h3 {
+    font-size: 22px;
+    color: #333;
+}
+
+.payment-option p {
+    font-size: 16px;
+    color: #555;
+}
+
+.payment-option label {
+    font-size: 16px;
+    margin-right: 15px;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 8px;
+}
+
+/* Description Section Styling */
+.description {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 16px;
+}
+
+#paymentDetails {
+    margin-top: 20px;
+    background-color: #f1f1f1;
+    padding: 15px;
+    border-radius: 5px;
+    display: none;
+    font-size: 16px;
+    color: #333;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 90%; /* Make the container take up more width on smaller screens */
+        padding: 15px; /* Adjust padding for mobile devices */
+    }
+
+    h2 {
+        font-size: 24px; /* Reduce font size of the title for smaller screens */
+    }
+
+    label {
+        font-size: 14px; /* Smaller labels on mobile */
+    }
+
+    input[type="text"], input[type="tel"], input[type="date"], button, input[type="submit"] {
+        font-size: 14px; /* Smaller font size for inputs and buttons on mobile */
+        padding: 10px; /* Adjust padding for inputs and buttons */
+    }
+
+    button {
+        padding: 12px 25px; /* Adjust button padding */
+    }
+
+    .payment-option h3 {
+        font-size: 20px; /* Adjust font size for the payment option section */
+    }
+
+    .description {
+        font-size: 14px; /* Adjust font size for description */
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 95%; /* Further increase width on very small screens */
+    }
+
+    h2 {
+        font-size: 20px; /* Even smaller font size for title */
+    }
+
+    label, input[type="text"], input[type="tel"], input[type="date"], button, input[type="submit"] {
+        font-size: 12px; /* Small font size for very small screens */
+        padding: 8px; /* Small padding for inputs and buttons */
+    }
+
+    button {
+        padding: 10px 20px; /* Smaller button padding */
+    }
+
+    .payment-option h3 {
+        font-size: 18px; /* Adjust payment option heading */
+    }
+
+    .description {
+        font-size: 12px; /* Adjust description text */
+    }
+}
